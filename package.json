@@ -1,0 +1,14 @@
+{
+  "name": "readora",
+  "version": "1.0.0",
+  "description": "Readora WordPress theme — Tailwind CSS build",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.output.css --minify",
+    "watch": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.output.css --watch",
+    "dev": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/tailwind.output.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

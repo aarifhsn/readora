@@ -1,0 +1,233 @@
+/**
+ * Editor Style — Readora
+ *
+ * Mirrors the frontend typography and spacing so the
+ * Gutenberg editor feels identical to the live site.
+ * Fonts are self-hosted via assets/css/fonts.css, enqueued
+ * separately on enqueue_block_editor_assets (see inc/fonts.php).
+ *
+ * @package Readora
+ */
+
+/* ============================================================
+   EDITOR BODY
+   ============================================================ */
+
+.editor-styles-wrapper {
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-size: 1.1875rem;
+	line-height: 1.75;
+	color: #2a2926;
+	background: #faf9f7;
+}
+
+.wp-block { max-width: 720px; }
+.wp-block[data-align="wide"] { max-width: 1040px; }
+.wp-block[data-align="full"] { max-width: none; }
+
+/* ============================================================
+   HEADINGS
+   Only Playfair Display 700 is bundled — every heading uses
+   that weight, and sizes are tuned so 700 doesn't read too heavy.
+   ============================================================ */
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6,
+.editor-styles-wrapper .editor-post-title__input {
+	font-family: 'Playfair Display', Georgia, serif;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: -0.01em;
+	color: #151514;
+	margin-bottom: 0.5em;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper .editor-post-title__input { font-size: 2.75rem; line-height: 1.1; letter-spacing: -0.02em; }
+.editor-styles-wrapper h2 { font-size: 1.75rem; }
+.editor-styles-wrapper h3 { font-size: 1.5rem; }
+.editor-styles-wrapper h4 { font-size: 1.25rem; }
+.editor-styles-wrapper h5 { font-size: 1.125rem; }
+.editor-styles-wrapper h6 { font-size: 1rem; }
+
+/* ============================================================
+   BODY TEXT / LINKS / LISTS
+   ============================================================ */
+
+.editor-styles-wrapper p {
+	font-size: inherit;
+	line-height: 1.75;
+	color: #2a2926;
+	margin-bottom: 1.4em;
+}
+
+.editor-styles-wrapper a {
+	color: #151514;
+	text-decoration: underline;
+	text-decoration-color: #c9262f;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+.editor-styles-wrapper strong { font-weight: 600; color: #151514; }
+
+.editor-styles-wrapper ul,
+.editor-styles-wrapper ol { padding-left: 1.5rem; margin-bottom: 1.4em; }
+
+.editor-styles-wrapper li {
+	margin-bottom: 0.4em;
+	color: #2a2926;
+	font-size: inherit;
+	line-height: 1.7;
+}
+
+/* ============================================================
+   BLOCKQUOTE
+   No Playfair italic is bundled: quotes use upright Inter instead.
+   ============================================================ */
+
+.editor-styles-wrapper blockquote {
+	margin: 2em 0;
+	padding: 0 0 0 1.5rem;
+	border: 0;
+	border-left: 2px solid #c9262f;
+	border-radius: 0;
+	background: transparent;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	font-size: 1.375rem;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.5;
+	color: #151514;
+}
+
+.editor-styles-wrapper blockquote p { font-size: inherit; color: inherit; margin: 0; }
+
+.editor-styles-wrapper blockquote cite {
+	display: block;
+	margin-top: 0.75rem;
+	font: 400 0.8125rem 'Inter', sans-serif;
+	font-style: normal;
+	color: #6d6c66;
+}
+
+/* ============================================================
+   CODE
+   ============================================================ */
+
+.editor-styles-wrapper code {
+	font-family: 'JetBrains Mono', 'Fira Code', monospace;
+	font-size: 0.9em;
+	background: #f0eee9;
+	padding: 0.15em 0.4em;
+	border-radius: 4px;
+	border: 1px solid #e1ded7;
+	color: #151514;
+}
+
+.editor-styles-wrapper pre {
+	background: #151514;
+	color: #f5f5f5;
+	padding: 1.5rem;
+	border-radius: 4px;
+	overflow-x: auto;
+	font-family: 'JetBrains Mono', monospace;
+	font-size: 0.9rem;
+}
+
+.editor-styles-wrapper pre code {
+	background: none;
+	border: none;
+	padding: 0;
+	color: inherit;
+}
+
+/* ============================================================
+   IMAGES
+   ============================================================ */
+
+.editor-styles-wrapper figure img { border-radius: 4px; max-width: 100%; }
+
+.editor-styles-wrapper figcaption {
+	font-size: 0.8125rem;
+	color: #6d6c66;
+	text-align: center;
+	margin-top: 0.6rem;
+}
+
+/* ============================================================
+   TABLES
+   ============================================================ */
+
+.editor-styles-wrapper table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.9375rem;
+	border: 1px solid #e1ded7;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.editor-styles-wrapper th {
+	background: #f0eee9;
+	font-weight: 600;
+	padding: 0.75rem 1rem;
+	text-align: left;
+	border-bottom: 1px solid #e1ded7;
+}
+
+.editor-styles-wrapper td {
+	padding: 0.75rem 1rem;
+	border-bottom: 1px solid #e1ded7;
+	color: #4a4944;
+}
+
+.editor-styles-wrapper tr:last-child td {
+	border-bottom: none;
+}
+
+/* ============================================================
+   HR
+   ============================================================ */
+
+.editor-styles-wrapper hr {
+	border: none;
+	border-top: 1px solid #e1ded7;
+	margin: 2rem 0;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.editor-styles-wrapper .wp-block-button__link {
+	background-color: #c1121f;
+	color: #ffffff;
+	border-radius: 4px;
+	font-weight: 600;
+	padding: 0.75rem 1.5rem;
+}
+
+/* ============================================================
+   PULLQUOTE
+   ============================================================ */
+
+.editor-styles-wrapper .wp-block-pullquote {
+	border-top: 1px solid #151514;
+	border-bottom: 1px solid #151514;
+	padding: 1.5rem 0;
+}
+
+.editor-styles-wrapper .wp-block-pullquote blockquote { padding: 0; border: 0; }
+
+.editor-styles-wrapper .wp-block-pullquote p {
+	font-family: 'Playfair Display', Georgia, serif;
+	font-size: 1.5rem;
+	font-style: normal;
+	font-weight: 700;
+	color: #151514;
+}
